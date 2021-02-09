@@ -62,6 +62,10 @@ function value(v: any): any {
     return array(v)
   }
 
+  if (v instanceof Date) {
+    return new Date(v)
+  }
+
   if (typeof v === 'object') {
     return object(v)
   }
